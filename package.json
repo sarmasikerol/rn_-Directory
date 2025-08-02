@@ -10,8 +10,21 @@
     "test": "jest"
   },
   "dependencies": {
+    "@eva-design/eva": "^2.2.0",
+    "@react-navigation/native": "^6.1.6",
+    "@react-navigation/native-stack": "^6.9.12",
+    "@reduxjs/toolkit": "^2.8.2",
+    "@ui-kitten/components": "^5.3.1",
+    "formik": "^2.4.6",
+    "iconsax-react-native": "^0.0.8",
     "react": "18.2.0",
-    "react-native": "0.73.8"
+    "react-native": "0.73.8",
+    "react-native-safe-area-context": "^5.5.2",
+    "react-native-screens": "^3.13.1",
+    "react-native-sqlite-storage": "^6.0.1",
+    "react-native-svg": "^15.12.0",
+    "react-redux": "^9.2.0",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
