@@ -1,80 +1,33 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 📱 React Native Contacts App (iOS Style)
 
-# Getting Started
+A mobile application built with **React Native**, mimicking the native iOS Contacts app. It enables users to perform complete **CRUD operations** on a **SQLite database** with a **relational group structure**—each contact is linked to a group via `group_id`.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## ✨ Features
 
-## Step 1: Start the Metro Server
+- Full **Create, Read, Update, Delete (CRUD)** functionality.
+- Relational database with **group_id** associations.
+- **React Navigation** for screen transitions.
+- **Redux Toolkit** for global state management.
+- **Formik** and **Yup** for form handling and validation.
+- **UI Kitten** for styled UI components.
+- **Iconsax** for modern icons.
+- iOS-inspired design and UX.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## 🧠 Tech Stack
 
-To start Metro, run the following command from the _root_ of your React Native project:
+| Package                         | Purpose                                 |
+|----------------------------------|------------------------------------------|
+| `react-native-sqlite-storage`   | Local SQLite database integration        |
+| `@reduxjs/toolkit`              | State management                         |
+| `react-redux`                   | React bindings for Redux                 |
+| `@react-navigation/native`      | Screen navigation                        |
+| `@react-navigation/native-stack`| Stack-based navigation                   |
+| `formik` + `yup`                | Form state & validation                  |
+| `@ui-kitten/components`         | UI components                            |
+| `iconsax-react-native`          | Icon library                             |
+| `react-native-svg`              | SVG and vector graphics support          |
+| `react-native-screens` & `react-native-safe-area-context` | Layout and safe areas |
 
-```bash
-# using npm
-npm start
+## 📸 Demo
 
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-# rn_-Directory
+![](ekran.gif)

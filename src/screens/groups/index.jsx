@@ -33,12 +33,14 @@ const Groups = () => {
   useEffect(() => {
     createTable();
     createPersonsTable();
-    getGroups(setList, dispatch);
+    getGroups(dispatch);
   }, []);
 
   const handleNewItem = () => {
     setAdd(!add);
-    if (add && newItem) addNewGroups(newItem, setList);
+    if (add && newItem) {
+      addNewGroups(newItem, dispatch); // dispatch'i ekle, setList'i kaldır
+    }
     setNewItem('');
   };
 
@@ -70,7 +72,7 @@ const Groups = () => {
             <GroupItem
               item={item}
               showDelete={showDelete}
-              deleteItem={id => deleteGroups(id, setList)}
+              deleteItem={id => deleteGroups(id, dispatch)}
             />
           )}
         />

@@ -37,18 +37,23 @@ export const createPersonsTable = () => {
   });
 };
 
-export const addNewGroups = (title, setList) => {
+export const addNewGroups = (title, dispatch) => {
   db.transaction(txn => {
     txn.executeSql(
       `INSERT INTO groups (title) VALUES (?)`,
       [title],
-      (sqlTxn, res) => getGroups(setList),
+      (sqlTxn, res) => {
+        console.log('Grup eklendi');
+        getGroups(dispatch); // Sadece dispatch geç
+      },
       error => console.log('Ekleme hatası', error),
     );
   });
 };
 
-export const getGroups = (setList, dispatch) => {
+// getGroups fonksiyonunu da düzelt (setList parametresini kaldır)
+export const getGroups = dispatch => {
+  // setList parametresini kaldır
   db.transaction(txn => {
     txn.executeSql(
       'SELECT * FROM groups',
@@ -66,13 +71,14 @@ export const getGroups = (setList, dispatch) => {
   });
 };
 
-export const deleteGroups = (id, setList) => {
+export const deleteGroups = (id, dispatch) => {
   db.transaction(txn => {
     txn.executeSql(
       ' DELETE FROM groups WHERE id=?',
       [id],
-      (sqlTxn, res) => console.log('veri siliindi', res.rows),
-      getGroups(setList),
+      (sqlTxn, res) => {
+        console.log('veri siliindi', res.rows), getGroups(dispatch);
+      },
       error => console.log('HATA', error.message),
     );
   });
